@@ -1,4 +1,4 @@
-# Auditing Rules (Draft)
+# JWS and JBCS LICENSEs Auditing Rules (Draft)
 
 1. Find the upstream source code from its official website.
 
@@ -8,9 +8,7 @@
 
 4. Store the `scancode` output into this project.
 
-5. If there are additional provements for a project's license, put it into this project in a per-component scope. (For example, the email discussions, the LICENSE.txt to be used, the code that proves the license to adopt, etc).
-
-
+5. If there are additional proofs for a project's license, put it into this project in a per-component scope. (For example, the email discussions, the LICENSE.txt to be used, the code that proves the license to adopt, etc).
 
 
 
