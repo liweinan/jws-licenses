@@ -1,0 +1,28 @@
+I used `cyrus-sasl-2.1.26-32.fc27` from Koji[^1].
+
+Here is the command to download the source code:
+```
+wget https://kojipkgs.fedoraproject.org//packages/cyrus-sasl/2.1.26/32.fc27/src/cyrus-sasl-2.1.26-32.fc27.src.rpm
+```
+
+In spec file I get the source URL:
+
+```
+# Source0 originally comes from ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/;
+# make-no-dlcompatorsrp-tarball.sh removes the "dlcompat" subdirectory and b\
+uilds a
+# new tarball.
+Source0: cyrus-sasl-%{version}-nodlcompatorsrp.tar.gz
+```
+
+I have used the source to generate `scancode` report which you can get in the `reports` directory.
+
+The situation is complex, so I adopted the `License`[^2] info in spec file:
+
+```
+$ grep 'License:' cyrus-sasl.spec
+License: BSD with advertising
+```
+
+[^1]: https://koji.fedoraproject.org/koji/buildinfo?buildID=881461
+[^2]: Generally speaking, Fedora repository is reliable.
