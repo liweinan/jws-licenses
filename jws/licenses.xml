@@ -42,17 +42,7 @@
             </licenses>
         </dependency>
         <dependency>
-            <groupId>org.apache.tomcat</groupId>
-            <artifactId>openssl</artifactId>
-            <licenses>
-                <license>
-                    <name>Apache Software License, Version 2.0</name>
-                    <url>http://repository.jboss.org/licenses/apache-2.0.txt</url>
-                </license>
-            </licenses>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.tomcat</groupId>
+            <groupId>org.apache.jk</groupId>
             <artifactId>mod_jk</artifactId>
             <licenses>
                 <license>
@@ -62,58 +52,19 @@
             </licenses>
         </dependency>
         <dependency>
-            <groupId>org.apache.tomcat</groupId>
+            <groupId>org.jboss.modcluster</groupId>
             <artifactId>mod_cluster</artifactId>
             <licenses>
                 <license>
-                    <name>Apache Software License, Version 2.0</name>
-                    <url>http://repository.jboss.org/licenses/apache-2.0.txt</url>
+                    <name>GNU Lesser General Public License, Version 2.1</name>
+                    <url>http://repository.jboss.org/licenses/lgpl-2.1.txt</url>
+                    <distribution>repo</distribution>
                 </license>
             </licenses>
         </dependency>
         <dependency>
-            <groupId>org.apache.tomcat</groupId>
-            <artifactId>mod_auth_kerb</artifactId>
-            <licenses>
-                <license>
-                    <name>Apache Software License, Version 2.0</name>
-                    <url>http://repository.jboss.org/licenses/apache-2.0.txt</url>
-                </license>
-            </licenses>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.tomcat</groupId>
-            <artifactId>jbcs-httpd24-apache-commons-daemon-1.0.15-1.redhat_2.1.jbcs.el6</artifactId>
-            <licenses>
-                <license>
-                    <name>Apache Software License, Version 2.0</name>
-                    <url>http://repository.jboss.org/licenses/apache-2.0.txt</url>
-                </license>
-            </licenses>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.tomcat</groupId>
-            <artifactId>jbcs-httpd24-1-3.jbcs.el6</artifactId>
-            <licenses>
-                <license>
-                    <name>Apache Software License, Version 2.0</name>
-                    <url>http://repository.jboss.org/licenses/apache-2.0.txt</url>
-                </license>
-            </licenses>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.tomcat</groupId>
-            <artifactId>jbcs-httpd24-apache-commons-daemon-jsvc</artifactId>
-            <licenses>
-                <license>
-                    <name>Apache Software License, Version 2.0</name>
-                    <url>http://repository.jboss.org/licenses/apache-2.0.txt</url>
-                </license>
-            </licenses>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.tomcat</groupId>
-            <artifactId>hibernate4-eap6</artifactId>
+            <groupId>org.apache.commons.daemon</groupId>
+            <artifactId>commons-daemon</artifactId>
             <licenses>
                 <license>
                     <name>Apache Software License, Version 2.0</name>
@@ -148,6 +99,17 @@
                 <license>
                     <name>Apache Software License, Version 2.0</name>
                     <url>http://repository.jboss.org/licenses/apache-2.0.txt</url>
+                </license>
+            </licenses>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate</artifactId>
+            <licenses>
+                <license>
+                    <name>GNU Lesser General Public License, Version 2.1</name>
+                    <url>http://repository.jboss.org/licenses/lgpl-2.1.txt</url>
+                    <comments>See also: http://hibernate.org/license</comments>
                 </license>
             </licenses>
         </dependency>
