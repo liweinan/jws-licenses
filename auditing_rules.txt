@@ -1,0 +1,14 @@
+# Auditing Rules
+
+1. Find the upstream source code from its official website.
+
+2. Run `scancode` against the downloaded source code.
+
+3. Determine the license of the project based on the `scancode` output.
+
+4. Store the `scancode` output into this project.
+
+5. If there are additional provements for a project's license, put it into this project in a per-component scope. (For example, the email discussions, the LICENSE.txt to be used, the code that proves the license to adopt).
+
+
+
