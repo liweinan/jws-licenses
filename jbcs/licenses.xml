@@ -190,8 +190,8 @@
             <artifactId>cyrus-sasl</artifactId>
             <licenses>
                 <license>
-                    <name></name>
-                    <url></url>
+                    <name>BSD with advertising</name>
+                    <url>http://repository.jboss.org/licenses/bsd.txt</url>
                 </license>
             </licenses>
         </dependency>
