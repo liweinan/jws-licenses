@@ -1,0 +1,21 @@
+AP_DIR = C:\Program Files\Apache Group\Apache2
+MS_LIB = C:\Program Files\Microsoft Visual Studio\VC98\lib
+CC = cl
+CCOPTS = -nologo -Gf -W3 -MD -O1 -DWIN32 -D_CONSOLE -I"$(AP_DIR)\include"
+LD = link
+LDOPTS = -dll -nologo -nodefaultlib -release -machine:x86
+
+LIBS = "$(AP_DIR)/lib/libapr.lib" \
+"$(AP_DIR)/lib/libaprutil.lib" \
+"$(AP_DIR)/lib/libhttpd.lib" \
+"$(MS_LIB)/kernel32.lib" "$(MS_LIB)/user32.lib" "$(MS_LIB)/msvcrt.lib"
+
+default: mod_rt.so
+
+mod_rt.so: mod_rt.obj
+	$(LD) $(LDOPTS) $(LIBS) mod_rt.obj -out:mod_rt.so
+
+mod_rt.obj:
+	$(CC) $(CCOPTS) -c mod_rt.c
+
+

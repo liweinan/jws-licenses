@@ -1,0 +1,19 @@
+# Build mod_rt
+#
+
+install -m 755 -d "$RPM_BUILD_ROOT$_confdir/httpd/conf.d"
+install -m 755 -d "$RPM_BUILD_ROOT$_libdir/httpd/modules"
+
+CC=cc
+export CC
+CFLAGS="$SUNCC_CFLAGS -O -Xa -KPIC"
+LDFLAGS="$SUNCC_LDFLAGS -G -KPIC -dy"
+$__perl -pi -e "s;LDFLAGS=\"\";LDFLAGS=\"$LDFLAGS\";g" $RPM_ROOT_DIR$_libdir/httpd/build/apr-1-config
+$__perl -pi -e "s;CFLAGS=\"\";CFLAGS=\"$CFLAGS\";g" $RPM_ROOT_DIR$_libdir/httpd/build/apr-1-config
+
+$RPM_ROOT_DIR$_libdir/httpd/build/apxs -c mod_rt.c
+test $? -ne 0 && exit 1
+install -m 755 .libs/mod_rt.so "$RPM_BUILD_ROOT$_libdir/httpd/modules"
+install -m 644 $_sourcedir/mod_rt.conf "$RPM_BUILD_ROOT$_confdir/httpd/conf.d/mod_rt.conf.sample"
+
+files="$_libdir $_confdir"
