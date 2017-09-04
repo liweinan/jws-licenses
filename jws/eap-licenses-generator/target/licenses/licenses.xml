@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<licenseSummary>
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.tomcat</groupId>
+            <artifactId>storeconfig-tc6</artifactId>
+            <licenses>
+                <license>
+                    <name>Apache Software License, Version 2.0</name>
+                    <url>http://repository.jboss.org/licenses/apache-2.0.txt</url>
+                </license>
+            </licenses>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.tomcat</groupId>
+            <artifactId>storeconfig-tc7</artifactId>
+            <licenses>
+                <license>
+                    <name>Apache Software License, Version 2.0</name>
+                    <url>http://repository.jboss.org/licenses/apache-2.0.txt</url>
+                </license>
+            </licenses>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.tomcat</groupId>
+            <artifactId>apr</artifactId>
+            <licenses>
+                <license>
+                    <name>Apache Software License, Version 2.0</name>
+                    <url>http://repository.jboss.org/licenses/apache-2.0.txt</url>
+                </license>
+            </licenses>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.tomcat</groupId>
+            <artifactId>apr-util</artifactId>
+            <licenses>
+                <license>
+                    <name>Apache Software License, Version 2.0</name>
+                    <url>http://repository.jboss.org/licenses/apache-2.0.txt</url>
+                </license>
+            </licenses>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.jk</groupId>
+            <artifactId>mod_jk</artifactId>
+            <licenses>
+                <license>
+                    <name>Apache Software License, Version 2.0</name>
+                    <url>http://repository.jboss.org/licenses/apache-2.0.txt</url>
+                </license>
+            </licenses>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.modcluster</groupId>
+            <artifactId>mod_cluster</artifactId>
+            <licenses>
+                <license>
+                    <name>GNU Lesser General Public License, Version 2.1</name>
+                    <url>http://repository.jboss.org/licenses/lgpl-2.1.txt</url>
+                    <distribution>repo</distribution>
+                </license>
+            </licenses>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons.daemon</groupId>
+            <artifactId>commons-daemon</artifactId>
+            <licenses>
+                <license>
+                    <name>Apache Software License, Version 2.0</name>
+                    <url>http://repository.jboss.org/licenses/apache-2.0.txt</url>
+                </license>
+            </licenses>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.tomcat</groupId>
+            <artifactId>tomcat-vault</artifactId>
+            <licenses>
+                <license>
+                    <name>Apache Software License, Version 2.0</name>
+                    <url>http://repository.jboss.org/licenses/apache-2.0.txt</url>
+                </license>
+            </licenses>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.tomcat</groupId>
+            <artifactId>tomcat7</artifactId>
+            <licenses>
+                <license>
+                    <name>Apache Software License, Version 2.0</name>
+                    <url>http://repository.jboss.org/licenses/apache-2.0.txt</url>
+                </license>
+            </licenses>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.tomcat</groupId>
+            <artifactId>tomcat8</artifactId>
+            <licenses>
+                <license>
+                    <name>Apache Software License, Version 2.0</name>
+                    <url>http://repository.jboss.org/licenses/apache-2.0.txt</url>
+                </license>
+            </licenses>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate</artifactId>
+            <licenses>
+                <license>
+                    <name>GNU Lesser General Public License, Version 2.1</name>
+                    <url>http://repository.jboss.org/licenses/lgpl-2.1.txt</url>
+                    <comments>See also: http://hibernate.org/license</comments>
+                </license>
+            </licenses>
+        </dependency>
+    </dependencies>
+</licenseSummary>
