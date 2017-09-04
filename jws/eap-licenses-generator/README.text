@@ -1,0 +1,25 @@
+Example license generator for Maven projects, based on EAP 7.0.x build.
+
+src/main/resources/template
+  licenses.xml	template XML containing complete list of product dependencies 
+		(without versions)
+  licenses.xsl	XSLT transformation for creating licenses.html
+  licenses.css	CSS file to accompany licenses.html
+
+src/main/resources/licenses
+  		text files containing licenses
+
+pom.xml		imports BOM for versions
+		passes <product> and <version> to XSLT transformation
+
+Requires JDK 8 to build
+
+Example build
+
+  mvn -Dmaven.repo.local=`pwd`/repo package
+
+
+EAP code (required jbossas github access):
+
+  https://github.com/jbossas/jboss-eap7/blob/7.x/feature-pack/pom.xml
+  https://github.com/jbossas/jboss-eap7/blob/7.x/feature-pack/src/license/licenses.xml

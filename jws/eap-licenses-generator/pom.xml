@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- Example POM file for adding versions to a license.xml file -->
+ 
+    <name>Licence Generator</name>
+    <groupId>org.jboss.prod</groupId>
+    <artifactId>license-gen</artifactId>
+    <version>0.0.1</version>
+    <packaging>pom</packaging>
+
+    <properties>
+        <output.directory>${project.build.directory}/licenses/</output.directory>
+        <template.directory>${project.basedir}/src/main/resources/template</template.directory>
+        <license.directory>${project.basedir}/src/main/resources/licenses</license.directory>
+    </properties>
+
+    <repositories>
+        <repository>
+            <id>mrrc</id>
+            <name>M.R.R.C.</name>
+            <url>https://maven.repository.redhat.com/ga/</url>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>breweap7</id>
+            <name>Brew EAP 7</name>
+            <url>http://download.devel.redhat.com/brewroot/repos/jb-eap-7.0-rhel-7-maven-build/latest/maven/</url>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <!-- List of versions (from external BOM) -->
+    <dependencyManagement>
+        <dependencies>
+            <!-- EAP 7.0.5 runtime BOM -->
+            <dependency>
+                <groupId>org.jboss.bom</groupId>
+                <artifactId>eap-runtime-artifacts</artifactId>
+                <version>7.0.5.GA</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <!-- List of product components - synchronise this with license.xml -->
+    <dependencies>
+        <dependency>
+            <groupId>antlr</groupId>
+            <artifactId>antlr</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!-- Copy the licenses.xml to the output directory -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>3.0.2</version>
+                <executions>
+                    <execution>
+                        <id>copy-licenses-xml</id>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${output.directory}</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>${template.directory}</directory>
+                                    <includes>
+                                        <include>licenses.xml</include>
+                                        <include>licenses.css</include>
+                                    </includes>
+                                    <filtering>false</filtering>
+                                </resource>
+                                <resource>
+                                    <directory>${license.directory}</directory>
+                                    <includes>
+                                        <include>*</include>
+                                    </includes>
+                                    <filtering>false</filtering>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!-- Add versions to the output licenses.xml -->
+            <plugin>
+                <groupId>org.wildfly.maven.plugins</groupId>
+                <artifactId>licenses-plugin</artifactId>
+                <version>1.0.0</version>
+                <inherited>false</inherited>
+                <executions>
+                    <execution>
+                        <id>update-licenses-xml</id>
+                        <goals>
+                            <goal>insert-versions</goal>
+                        </goals>
+                        <phase>prepare-package</phase>
+                        <configuration>
+                            <sortByGroupIdAndArtifactId>true</sortByGroupIdAndArtifactId>
+                            <licensesOutputFile>${output.directory}/licenses.xml</licensesOutputFile>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!-- Create HTML (parameters: product, version) -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>xml-maven-plugin</artifactId>
+                <version>1.0.1</version>
+                <inherited>false</inherited>
+                <executions>
+                    <execution>
+                        <id>generate-licenses-html</id>
+                        <goals>
+                            <goal>transform</goal>
+                        </goals>
+                        <phase>prepare-package</phase>
+                        <configuration>
+                            <transformationSets>
+                                <transformationSet>
+                                    <dir>${output.directory}</dir>
+                                    <includes>
+                                        <include>licenses.xml</include>
+                                    </includes>
+                                    <stylesheet>${template.directory}/licenses.xsl</stylesheet>
+                                    <outputDir>${output.directory}</outputDir>
+                                    <fileMappers>
+                                        <fileMapper implementation="org.codehaus.plexus.components.io.filemappers.FileExtensionMapper">
+                                            <targetExtension>.html</targetExtension>
+                                        </fileMapper>
+                                    </fileMappers>
+                                    <parameters>
+                                        <parameter>
+                                            <name>product</name>
+                                            <value>${project.name}</value>
+                                        </parameter>
+                                        <parameter>
+                                            <name>version</name>
+                                            <value>${project.version}</value>
+                                        </parameter>
+                                    </parameters>
+                                </transformationSet>
+                            </transformationSets>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+        </plugins>
+    </build>
+
+</project>

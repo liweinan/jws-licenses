@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<licenseSummary>
+  <dependencies>
+
+    <dependency>
+      <groupId>antlr</groupId>
+      <artifactId>antlr</artifactId>
+      <licenses>
+        <license>
+          <name>The Antlr 2.7.7 License</name>
+          <url>http://www.antlr2.org/download/antlr-2.7.7.tar.gz</url>
+          <distribution>repo</distribution>
+        </license>
+      </licenses>
+    </dependency>
+
+    <dependency>
+      <groupId>com.h2database</groupId>
+      <artifactId>h2</artifactId>
+      <licenses>
+        <license>
+          <name>H2 License, Version 1.0</name>
+          <url>http://repository.jboss.org/licenses/h2.txt</url>
+          <distribution>repo</distribution>
+        </license>
+        <license>
+          <name>Eclipse Public License, Version 1.0</name>
+          <url>http://repository.jboss.org/licenses/epl-1.0.txt</url>
+          <distribution>repo</distribution>
+        </license>
+      </licenses>
+    </dependency>
+
+  </dependencies>
+</licenseSummary>
