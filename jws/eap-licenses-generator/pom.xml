@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <!-- Example POM file for adding versions to a license.xml file -->
- 
+
     <name>Licence Generator</name>
     <groupId>org.jboss.prod</groupId>
     <artifactId>license-gen</artifactId>
@@ -85,13 +85,13 @@
                                     </includes>
                                     <filtering>false</filtering>
                                 </resource>
-                                <resource>
+                                <!-- <resource>
                                     <directory>${license.directory}</directory>
                                     <includes>
                                         <include>*</include>
                                     </includes>
                                     <filtering>false</filtering>
-                                </resource>
+                                </resource> -->
                             </resources>
                         </configuration>
                     </execution>
@@ -99,7 +99,7 @@
             </plugin>
 
             <!-- Add versions to the output licenses.xml -->
-            <plugin>
+            <!-- <plugin>
                 <groupId>org.wildfly.maven.plugins</groupId>
                 <artifactId>licenses-plugin</artifactId>
                 <version>1.0.0</version>
@@ -117,7 +117,7 @@
                         </configuration>
                     </execution>
                 </executions>
-            </plugin>
+            </plugin> -->
 
             <!-- Create HTML (parameters: product, version) -->
             <plugin>

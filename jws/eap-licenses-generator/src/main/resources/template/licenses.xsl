@@ -38,7 +38,7 @@
                                 </xsl:for-each>
                             </td>
                             <td>
-                                <xsl:for-each select="licenses/license">
+                                <!-- <xsl:for-each select="licenses/license">
                                     <xsl:variable name="name" select="translate(name,$uppercase,$lowercase)" />
                                     <xsl:variable name="last-index">
                                         <xsl:call-template name="last-index-of">
@@ -54,7 +54,7 @@
                                         </xsl:call-template>
                                     </xsl:variable>
                                     <a href="{$filename}"><xsl:value-of select="$filename"/></a><br/>
-                                </xsl:for-each>
+                                </xsl:for-each> -->
                             </td>
                         </tr>
                     </xsl:for-each>
@@ -92,7 +92,7 @@
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
-    <xsl:template name="remap-local-filename">
+    <!-- <xsl:template name="remap-local-filename">
         <xsl:param name="filename"/>
 
         <xsl:choose>
@@ -115,5 +115,5 @@
                 <xsl:value-of select="$filename"/>
             </xsl:otherwise>
         </xsl:choose>
-    </xsl:template>
+    </xsl:template> -->
 </xsl:stylesheet>
