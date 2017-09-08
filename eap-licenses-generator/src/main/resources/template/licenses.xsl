@@ -81,14 +81,17 @@
             <xsl:when test="$filename = 'GNU Lesser General Public License, Version 2.1'">
                 <xsl:text>lgpl-2.1.txt</xsl:text>
             </xsl:when>
-            <xsl:when test="$filename = 'the dom4j license - license'">
-                <xsl:text>the dom4j license.txt</xsl:text>
+            <xsl:when test="$filename = 'The BSD License'">
+                <xsl:text>bsd-2-clause.txt</xsl:text>
             </xsl:when>
-            <xsl:when test="$filename = 'gnu library general public license, version 2 - lgpl-2.0.txt'">
-                <xsl:text>gnu library general public license, version 2.txt</xsl:text>
+            <xsl:when test="$filename = 'The MIT License'">
+                <xsl:text>mit.txt</xsl:text>
             </xsl:when>
-            <xsl:when test="$filename = 'creative commons attribution 2.5 - legalcode'">
-                <xsl:text>creative commons attribution 2.5.html</xsl:text>
+            <xsl:when test="$filename = 'OpenSSL License'">
+                <xsl:text>openSSL license - openssl.txt</xsl:text>
+            </xsl:when>
+            <xsl:when test="$filename = 'GNU Lesser General Public License, Version 3'">
+                <xsl:text>gnu lesser general public license, version 3 - lgpl-3.0.txt</xsl:text>
             </xsl:when>
             <xsl:otherwise>
                 <xsl:value-of select="$filename"/>
