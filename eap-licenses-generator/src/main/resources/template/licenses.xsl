@@ -52,19 +52,15 @@
                             </td>
                             <td>
                                 <xsl:for-each select="licenses/license">
-                                    <!--<xsl:variable name="filename">-->
-                                        <!--<xsl:call-template name="remap-local-filename">-->
-                                            <!--<xsl:with-param name="filename"-->
-                                                            <!--select="concat($prefix,translate($postfix,$uppercase,$lowercase))"/>-->
-                                        <!--</xsl:call-template>-->
-                                    <!--</xsl:variable>-->
-                                    <a href="{./name}">
-                                        <xsl:value-of select="name"/>
+                                    <xsl:variable name="filename">
+                                        <xsl:call-template name="remap-local-filename">
+                                            <xsl:with-param name="filename"
+                                                            select="name"/>
+                                        </xsl:call-template>
+                                    </xsl:variable>
+                                    <a href="{$filename}">
+                                        <xsl:value-of select="$filename"/>
                                     </a>
-
-                                    <!--<a href="{$filename}">-->
-                                        <!--<xsl:value-of select="$filename"/>-->
-                                    <!--</a>-->
                                     <br/>
                                 </xsl:for-each>
                             </td>
@@ -79,11 +75,11 @@
         <xsl:param name="filename"/>
 
         <xsl:choose>
-            <xsl:when test="$filename = 'the antlr 2.7.7 license - antlr-2.7.7.tar.gz'">
-                <xsl:text>the antlr 2.7.7 license.txt</xsl:text>
+            <xsl:when test="$filename = 'Apache Software License, Version 2.0'">
+                <xsl:text>apache-2.0.txt</xsl:text>
             </xsl:when>
-            <xsl:when test="$filename = 'the asm bsd license - license.html'">
-                <xsl:text>the asm bsd license.txt</xsl:text>
+            <xsl:when test="$filename = 'GNU Lesser General Public License, Version 2.1'">
+                <xsl:text>lgpl-2.1.txt</xsl:text>
             </xsl:when>
             <xsl:when test="$filename = 'the dom4j license - license'">
                 <xsl:text>the dom4j license.txt</xsl:text>
