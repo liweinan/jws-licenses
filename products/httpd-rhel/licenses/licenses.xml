@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<licenseSummary>
+ <dependencies>
+   <dependency>
+     <groupId>org.apache.tomcat</groupId>
+     <artifactId>mod_jk</artifactId>
+     <licenses>
+       <license>
+         <name>Apache Software License, Version 2.0</name>
+         <url>http://repository.jboss.org/licenses/apache-2.0.txt</url>
+       </license>
+     </licenses>
+   </dependency>
+   <dependency>
+     <groupId>org.apache.httpd</groupId>
+     <artifactId>httpd</artifactId>
+     <licenses>
+       <license>
+         <name>Apache Software License, Version 2.0</name>
+         <url>http://repository.jboss.org/licenses/apache-2.0.txt</url>
+       </license>
+     </licenses>
+   </dependency>
+   <dependency>
+     <groupId>commons-daemon</groupId>
+     <artifactId>commons-daemon</artifactId>
+     <licenses>
+       <license>
+         <name>Apache Software License, Version 2.0</name>
+         <url>http://repository.jboss.org/licenses/apache-2.0.txt</url>
+       </license>
+     </licenses>
+   </dependency>
+   <dependency>
+     <groupId>org.jboss.mod_cluster</groupId>
+     <artifactId>mod_cluster-native</artifactId>
+     <licenses>
+       <license>
+         <name>GNU Lesser General Public License, Version 3</name>
+         <url>http://repository.jboss.org/licenses/lgpl-3.0.txt</url>
+       </license>
+     </licenses>
+   </dependency>
+   <dependency>
+     <groupId>mod_rt</groupId>
+     <artifactId>mod_rt</artifactId>
+     <licenses>
+       <license>
+         <name>Apache Software License, Version 2.0</name>
+         <url>http://repository.jboss.org/licenses/apache-2.0.txt</url>
+       </license>
+     </licenses>
+   </dependency>
+   <dependency>
+     <groupId>mod_bmx</groupId>
+     <artifactId>mod_bmx</artifactId>
+     <licenses>
+       <license>
+         <name>Apache Software License, Version 2.0</name>
+         <url>http://repository.jboss.org/licenses/apache-2.0.txt</url>
+       </license>
+     </licenses>
+   </dependency>
+   <dependency>
+     <groupId>net.sourceforge.modauthkerb</groupId>
+     <artifactId>mod_auth_kerb</artifactId>
+     <licenses>
+       <license>
+         <name>The BSD License</name>
+         <url>http://repository.jboss.org/licenses/bsd.txt</url>
+       </license>
+       <license>
+         <name>The MIT License</name>
+         <url>http://repository.jboss.org/licenses/mit.txt</url>
+       </license>
+     </licenses>
+   </dependency>
+   <dependency>
+     <groupId>org.modsecurity</groupId>
+     <artifactId>mod_security</artifactId>
+     <licenses>
+       <license>
+         <name>Apache Software License, Version 2.0</name>
+         <url>http://repository.jboss.org/licenses/apache-2.0.txt</url>
+       </license>
+     </licenses>
+   </dependency>
+   <dependency>
+     <groupId>nghttp2</groupId>
+     <artifactId>nghttp2</artifactId>
+     <licenses>
+       <license>
+         <name>The MIT License</name>
+         <url>http://repository.jboss.org/licenses/mit.txt</url>
+       </license>
+     </licenses>
+   </dependency>
+   <dependency>
+     <groupId>openssl</groupId>
+     <artifactId>openssl</artifactId>
+     <licenses>
+       <license>
+         <name>OpenSSL License</name>
+         <url>https://www.openssl.org/source/license.html</url>
+       </license>
+     </licenses>
+   </dependency>
+ </dependencies>
+</licenseSummary>

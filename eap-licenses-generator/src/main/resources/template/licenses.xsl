@@ -58,7 +58,7 @@
                                                             select="name"/>
                                         </xsl:call-template>
                                     </xsl:variable>
-                                    <a href="{$filename}">
+                                    <a class=".filename" href="{$filename}">
                                         <xsl:value-of select="$filename"/>
                                     </a>
                                     <br/>
@@ -92,6 +92,15 @@
             </xsl:when>
             <xsl:when test="$filename = 'GNU Lesser General Public License, Version 3'">
                 <xsl:text>gnu lesser general public license, version 3 - lgpl-3.0.txt</xsl:text>
+            </xsl:when>
+            <xsl:when test="$filename = 'The OpenLDAP Public License'">
+                <xsl:text>OpenLDAP Public License.html</xsl:text>
+            </xsl:when>
+            <xsl:when test="$filename = 'BSD with advertising'">
+                <xsl:text>bsd-2-clause.txt</xsl:text>
+            </xsl:when>
+            <xsl:when test="$filename = 'The zlib License'">
+                <xsl:text>zlib License.html</xsl:text>
             </xsl:when>
             <xsl:otherwise>
                 <xsl:value-of select="$filename"/>
