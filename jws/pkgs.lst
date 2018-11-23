@@ -1,7 +1,0 @@
-Package list extracted from:
-- https://errata.devel.redhat.com/advisory/21912/builds
-- https://errata.devel.redhat.com/advisory/21911/builds
-
-Component Urls:
-
-- Apache Portable Runtime (APR) based Native library for Tomcat https://tomcat.apache.org/tomcat-7.0-doc/apr.html
